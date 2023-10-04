@@ -45,7 +45,6 @@ sample_non_fraud_transaction = {
 def credit_card_fraud_detection_workflow(input_data_path: str, sample_fraud_transaction: Dict[str, float]) -> bool:
     preprocess_task = preprocess_data(filepath=input_data_path)
 
-	# Define a task that splits the data into training and testing sets
     train_data, test_data = split_data(filepath=preprocess_task)
     train_task = "data/spark_data"
     if not os.path.exists(train_task):

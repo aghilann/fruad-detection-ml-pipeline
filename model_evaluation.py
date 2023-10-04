@@ -8,9 +8,9 @@ import pandas as pd
 from flytekit import task
 
 @task
-def evaluate_model(model_path):
+def evaluate_model(model_path: str) -> None:
     # Set up logging
-    logging.basicConfig(filename='logs/evaluation.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+    logging.basicConfig(filename='logs/model_evaluation.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     
     # Create Spark session
     spark = SparkSession.builder.appName("FraudDetectionModelEvaluation").getOrCreate()
@@ -94,4 +94,4 @@ def is_fraudulent_transaction(input_data: Dict[str, float], model_path: str) -> 
 
 if __name__ == "__main__":
     model_path = "data/spark_data"
-    evaluate_model(model_path)
+    evaluate_model(model_path=model_path)
