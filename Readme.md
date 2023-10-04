@@ -4,7 +4,7 @@
 
 ## Introduction
 
-The Credit Card Fraud Detection project is a machine learning-based solution that aims to identify fraudulent credit card transactions from a dataset of credit card transactions. It utilizes Apache Spark and a Random Forest classification model to predict whether a transaction is fraudulent or not.
+The Credit Card Fraud Detection project is a machine learning-based solution that aims to identify fraudulent credit card transactions from a dataset of credit card transactions. It utilizes Apache Spark and a Random Forest classification model to predict whether a transaction is fraudulent or not. It uses Flyte for orchestrating the machine learning workflow and Flask for serving the model as a REST API.
 
 ## Features
 
