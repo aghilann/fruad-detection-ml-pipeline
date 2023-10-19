@@ -3,12 +3,16 @@ from tpot import TPOTClassifier
 from sklearn.model_selection import train_test_split
 import logging
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+def setup_logging():
+    logging.basicConfig(filename='logs/spark_model_training.log',
+                        level=logging.INFO,
+                        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    logger = logging.getLogger(__name__)
+    return logger
 
 def model_selection(file_path):
     # Load the preprocessed data
+    logger = setup_logging()
     data = pd.read_csv(file_path)
     
     # Split the data into features and target
