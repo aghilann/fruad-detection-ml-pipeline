@@ -47,6 +47,6 @@ class S3:
 
 if __name__ == '__main__':
     pass
-    # s3_store = S3(bucket_name='mlinfra')
-    # print(s3_store.read_file('path_to_folder', 'credit_card_fraud.csv'))
-    # s3_store.write_file('path_to_folder', 'new_file.txt', 'This is the content to write.')
+    s3_store = S3(bucket_name='mlinfra')
+    x = s3_store.read_file('data', 'credit_card_fraud.csv')
+

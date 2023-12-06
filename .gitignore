@@ -2,3 +2,5 @@ data/spark_data/
 logs/
 __pycache__
 .idea/workspace.xml
+.env
+myenv/
