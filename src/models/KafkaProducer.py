@@ -11,7 +11,7 @@ producer = KafkaProducer(
     sasl_mechanism='SCRAM-SHA-256',
     security_protocol='SASL_SSL',
     sasl_plain_username='c3VwZXJiLWdvbGRmaXNoLTEwMDY4JLeFgjhjHS6GjGVu9PXkdWb2zKS_1XyxVik',
-    sasl_plain_password='YzM0ZDk2MWMtNWU5Ni00M2I2LWE2ZDQtY2NjNmQ4YzhkMTMw'  # Replace with your actual password
+    sasl_plain_password=''  # Replace with your actual password
 )
 
 # Check if the producer is connected
